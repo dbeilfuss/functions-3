@@ -11,14 +11,12 @@ let numbers = [40, 68, 14, 90, 49];
 
 // CODE HERE
 const halveIt = (numsArray) => {
-  let halvedNums = [];
   for (let num of numsArray) {
-    halvedNums.push(num / 2);
+    console.log(num / 2);
   }
-  return halvedNums;
 };
 
-console.log(halveIt(numbers));
+halveIt(numbers);
 
 ////////// PROBLEM 2 //////////
 
@@ -31,6 +29,9 @@ console.log(halveIt(numbers));
 */
 
 // CODE HERE
+
+const halvedNums = numbers.map((value) => value * 0.5);
+console.log(halvedNums);
 
 ////////// PROBLEM 3 //////////
 
@@ -57,7 +58,8 @@ let cities = [
 */
 
 // CODE HERE
-
+const citiesEndingInI = cities.filter((cityName) => cityName.slice(-1) === `i`);
+console.log(citiesEndingInI);
 ////////// PROBLEM 4 //////////
 
 // ***** Do not edit the code below *****
@@ -92,6 +94,27 @@ let fruits = [
 */
 
 // CODE HERE
+const findApplesAndOranges = (listOfFruit) => {
+  for (let fruit of listOfFruit) {
+    if (fruit.color === "red") {
+      console.log(
+        `The fruit with the index ${listOfFruit.indexOf(fruit)} is an apple.`
+      );
+    } else if (fruit.color === "orange") {
+      console.log(
+        `The fruit with the index ${listOfFruit.indexOf(fruit)} is an orange.`
+      );
+    } else {
+      console.log(
+        `The fruit with the index ${listOfFruit.indexOf(
+          fruit
+        )} is neither apple nor orange.`
+      );
+    }
+  }
+};
+
+findApplesAndOranges(fruits);
 
 /* 
     Run the code in node to see the result. Then, copy and paste the result below.
@@ -101,9 +124,18 @@ let fruits = [
     The fruit with index 1 is an orange
     The fruit with index 2 is neither apple or orange
     The fruit with index 3 is an apple  
-*/
+
+    
+    */
 
 // COPY AND PASTE THE RESULT FROM YOUR CONSOLE (NODE CONSOLE IS YOUR TERMINAL) HERE (AS A MULTI LINES COMMENT)
+/*
+It worked!
+The fruit with the index 0 is neither apple nor orange.
+The fruit with the index 1 is an orange.
+The fruit with the index 2 is neither apple nor orange.
+The fruit with the index 3 is an apple.
+*/
 
 ////////// PROBLEM 5 //////////
 
