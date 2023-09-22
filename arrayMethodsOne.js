@@ -49,7 +49,7 @@ console.log(postTaxPrices);
 ////////// PROBLEM 3 //////////
 
 // Do not edit the code below.
-// const populations = [8175133, 3792621, 2695598, 2100263];
+const populations = [8175133, 3792621, 2695598, 2100263];
 // Do not edit the code above.
 
 /*
@@ -60,7 +60,10 @@ console.log(postTaxPrices);
 */
 
 // CODE HERE
-// const totalPopulation //  = populations.reduce(/* Provide Your Callback Here */)
+const totalPopulation = populations.reduce((sum, addend) => sum + addend);
+
+console.log(totalPopulation);
+console.log(populations[0] + populations[1] + populations[2] + populations[3]);
 
 ////////// PROBLEM 4 //////////
 
@@ -101,7 +104,11 @@ const monstersInYourPocket = [
 */
 
 // CODE HERE
-// const myStrongest // = monstersInYourPocket.filter(/* Provide Your Callback Here */)
+const strong = 200;
+const myStrongest = monstersInYourPocket.filter(
+  (monster) => monster.CP > strong
+);
+console.log(myStrongest);
 
 ////////// PROBLEM 5 //////////
 
@@ -125,6 +132,8 @@ const orders = [
 */
 
 // CODE HERE
+const totalWithTax = orders.map((order) => order.price * (1 + order.tax));
+console.log(totalWithTax);
 
 ////////// PROBLEM 6 //////////
 
