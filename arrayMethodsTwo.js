@@ -95,23 +95,17 @@ let fruits = [
 
 // CODE HERE
 const findApplesAndOranges = (listOfFruit) => {
-  for (let fruit of listOfFruit) {
+  listOfFruit.forEach((fruit, index) => {
     if (fruit.color === "red") {
-      console.log(
-        `The fruit with the index ${listOfFruit.indexOf(fruit)} is an apple.`
-      );
+      console.log(`The fruit with the index ${index} is an apple.`);
     } else if (fruit.color === "orange") {
-      console.log(
-        `The fruit with the index ${listOfFruit.indexOf(fruit)} is an orange.`
-      );
+      console.log(`The fruit with the index ${index} is an orange.`);
     } else {
       console.log(
-        `The fruit with the index ${listOfFruit.indexOf(
-          fruit
-        )} is neither apple nor orange.`
+        `The fruit with the index ${index} is neither apple nor orange.`
       );
     }
-  }
+  });
 };
 
 findApplesAndOranges(fruits);
@@ -179,5 +173,12 @@ let foods = [
 */
 
 // CODE HERE
+const ricePrice = (food) => {
+  return food
+    .filter((food) => (food.name = "rice"))
+    .reduce((sum, addend) => sum + addend.price, 0);
+};
+
+console.log(ricePrice(foods));
 
 // THE TOTAL
