@@ -167,3 +167,8 @@ const purchases = [
 */
 
 // CODE HERE
+const bobsTotal = purchases
+  .filter((purchases) => purchases.owner === "Bob")
+  .reduce((sum, addend) => sum + addend.price, 0);
+
+console.log(bobsTotal);
