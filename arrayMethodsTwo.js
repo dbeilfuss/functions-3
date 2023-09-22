@@ -10,7 +10,15 @@ let numbers = [40, 68, 14, 90, 49];
 */
 
 // CODE HERE
+const halveIt = (numsArray) => {
+  let halvedNums = [];
+  for (let num of numsArray) {
+    halvedNums.push(num / 2);
+  }
+  return halvedNums;
+};
 
+console.log(halveIt(numbers));
 
 ////////// PROBLEM 2 //////////
 
@@ -23,7 +31,6 @@ let numbers = [40, 68, 14, 90, 49];
 */
 
 // CODE HERE
-
 
 ////////// PROBLEM 3 //////////
 
@@ -50,7 +57,6 @@ let cities = [
 */
 
 // CODE HERE
-
 
 ////////// PROBLEM 4 //////////
 
@@ -87,8 +93,6 @@ let fruits = [
 
 // CODE HERE
 
-
-
 /* 
     Run the code in node to see the result. Then, copy and paste the result below.
 
@@ -100,8 +104,6 @@ let fruits = [
 */
 
 // COPY AND PASTE THE RESULT FROM YOUR CONSOLE (NODE CONSOLE IS YOUR TERMINAL) HERE (AS A MULTI LINES COMMENT)
-
-
 
 ////////// PROBLEM 5 //////////
 
@@ -146,6 +148,4 @@ let foods = [
 
 // CODE HERE
 
-
 // THE TOTAL
-
